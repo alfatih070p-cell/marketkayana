@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayana Market | Alfatih Ghani Hamizan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+        .btn-red { background-color: #e11d48; transition: 0.3s; }
+        .btn-red:hover { background-color: #be123c; }
+        .card-shadow { box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .search-bar { background: #f4f4f4; border-radius: 8px; }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- TOP HEADER / NAV -->
+    <header class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <h1 class="text-xl font-black italic tracking-tighter uppercase">Kayana<span class="text-rose-600 underline">Market</span></h1>
+                <nav class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-widest text-gray-600">
+                    <a href="#" class="hover:text-black border-b-2 border-transparent hover:border-black transition">Categories</a>
+                    <a href="#" class="hover:text-black border-b-2 border-transparent hover:border-black transition">Skills</a>
+                    <a href="#" class="hover:text-black border-b-2 border-transparent hover:border-black transition">Achievements</a>
+                    <a href="#" class="hover:text-black border-b-2 border-transparent hover:border-black transition">FAQ</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="text-xs font-bold uppercase border-2 border-black px-4 py-1.5 rounded-full hover:bg-black hover:text-white transition">SELL</button>
+                <div class="relative">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-rose-600 text-white text-[10px] px-1.5 rounded-full">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Featured Item) -->
+    <section class="bg-[#ebece7] py-12 md:py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center relative">
+            <div class="w-full md:w-1/2 z-10 text-center md:text-left mb-10 md:mb-0">
+                <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">New Release</p>
+                <h2 class="text-4xl md:text-7xl font-black leading-none uppercase mb-4 text-gray-900">
+                    WEB DEV <br> <span class="text-rose-600">X SERVICES</span>
+                </h2>
+                <p class="text-gray-600 font-medium mb-8 max-w-sm mx-auto md:mx-0 uppercase text-xs tracking-tighter">Alfatih Ghani Hamizan - High Quality Digital Solution for SMAN 19 Garut Students.</p>
+                <button onclick="orderService('Jasa Pembuatan Website')" class="btn-red text-white px-10 py-4 font-bold rounded-sm shadow-xl italic tracking-tighter">DAPATKAN SEKARANG</button>
+            </div>
+            <div class="w-full md:w-1/2 relative flex justify-center">
+                <!-- Replace with your professional photo or main service image -->
+                <img src="https://via.placeholder.com/600x400?text=Alfatih+Ghani" alt="Hero Image" class="w-full max-w-lg transform -rotate-6 hover:rotate-0 transition duration-700">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10rem] font-black text-white opacity-40 -z-10 select-none">KAYANA</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POPULAR CATEGORIES (Skill Set) -->
+    <div class="max-w-7xl mx-auto px-4 -mt-8 relative z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-[#222] p-6 rounded-sm text-white flex flex-col items-center justify-center text-center">
+                <p class="text-[10px] font-bold uppercase tracking-widest opacity-60">Tech Skill</p>
+                <h4 class="text-xl font-bold italic underline decoration-rose-600">CODING</h4>
+            </div>
+            <div class="bg-[#d4b99a] p-6 rounded-sm text-white flex flex-col items-center justify-center text-center">
+                <p class="text-[10px] font-bold uppercase tracking-widest opacity-60">Education</p>
+                <h4 class="text-xl font-bold italic underline decoration-white">SCIENCE</h4>
+            </div>
+            <div class="bg-[#6b7360] p-6 rounded-sm text-white flex flex-col items-center justify-center text-center">
+                <p class="text-[10px] font-bold uppercase tracking-widest opacity-60">Sport</p>
+                <h4 class="text-xl font-bold italic underline decoration-rose-400">CHESS</h4>
+            </div>
+            <div class="bg-[#c2c2c2] p-6 rounded-sm text-white flex flex-col items-center justify-center text-center">
+                <p class="text-[10px] font-bold uppercase tracking-widest opacity-60">Creative</p>
+                <h4 class="text-xl font-bold italic underline decoration-black text-black uppercase">Arts</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEARCH BAR STYLE -->
+    <div class="max-w-7xl mx-auto px-4 mt-12">
+        <div class="search-bar p-3 flex items-center">
+            <input type="text" placeholder="Cari jasa atau modul belajar..." class="bg-transparent w-full px-4 outline-none font-medium text-sm">
+            <i class="fa-solid fa-magnifying-glass px-4 text-gray-400"></i>
+        </div>
+    </div>
+
+    <!-- MOST POPULAR (Main Services) -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="flex justify-between items-end mb-8 border-b-2 border-gray-100 pb-4">
+            <div>
+                <h3 class="text-2xl font-black uppercase italic">Most Popular Jasa</h3>
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Katalog Layanan Terbaik Alfatih</p>
+            </div>
+            <a href="#" class="text-rose-600 font-bold text-xs uppercase underline">See All ></a>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            
+            <!-- Item 1: Physics -->
+            <div class="group cursor-pointer" onclick="orderService('Fisika Speedrun Kelas 10-11')">
+                <div class="bg-white p-4 mb-3 card-shadow rounded-sm overflow-hidden border hover:border-rose-500 transition">
+                    <img src="https://via.placeholder.com/200x200?text=Physics" class="w-full h-32 object-contain group-hover:scale-110 transition duration-500">
+                </div>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">Alfatih Education</p>
+                <h5 class="text-xs font-bold uppercase leading-tight mb-1">Fisika Speedrun Kelas 10 & 11</h5>
+                <p class="text-rose-600 text-xs font-black">IDR TANYA HARGA</p>
+                <p class="text-[10px] font-bold text-green-600 uppercase">Garansi Refund</p>
+            </div>
+
+            <!-- Item 2: Chess -->
+            <div class="group cursor-pointer" onclick="orderService('Kursus Catur Elo 2000')">
+                <div class="bg-white p-4 mb-3 card-shadow rounded-sm border hover:border-rose-500 transition">
+                    <img src="https://via.placeholder.com/200x200?text=Chess" class="w-full h-32 object-contain group-hover:scale-110 transition">
+                </div>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">Sport Skill</p>
+                <h5 class="text-xs font-bold uppercase leading-tight mb-1">Jago Catur Elo 2000</h5>
+                <p class="text-rose-600 text-xs font-black">IDR NEGOTIABLE</p>
+                <p class="text-[10px] font-bold text-green-600 uppercase">Garansi Refund</p>
+            </div>
+
+            <!-- Item 3: Apps -->
+            <div class="group cursor-pointer" onclick="orderService('Jasa Aplikasi Sederhana')">
+                <div class="bg-white p-4 mb-3 card-shadow rounded-sm border hover:border-rose-500 transition">
+                    <img src="https://via.placeholder.com/200x200?text=Coding" class="w-full h-32 object-contain group-hover:scale-110 transition">
+                </div>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">Tech Service</p>
+                <h5 class="text-xs font-bold uppercase leading-tight mb-1">Buat Aplikasi Sederhana</h5>
+                <p class="text-rose-600 text-xs font-black">IDR BEST PRICE</p>
+                <p class="text-[10px] font-bold text-green-600 uppercase">Garansi Refund</p>
+            </div>
+
+            <!-- Item 4: Delivery -->
+            <div class="group cursor-pointer" onclick="orderService('Jasa Antar Barang')">
+                <div class="bg-white p-4 mb-3 card-shadow rounded-sm border hover:border-rose-500 transition">
+                    <img src="https://via.placeholder.com/200x200?text=Delivery" class="w-full h-32 object-contain group-hover:scale-110 transition">
+                </div>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">General Service</p>
+                <h5 class="text-xs font-bold uppercase leading-tight mb-1">Jasa Antar Barang (Garut)</h5>
+                <p class="text-rose-600 text-xs font-black">START IDR 5.000</p>
+                <p class="text-[10px] font-bold text-green-600 uppercase">Aman & Cepat</p>
+            </div>
+
+            <!-- Item 5: Drawing -->
+            <div class="group cursor-pointer" onclick="orderService('Jasa Gambar Manual')">
+                <div class="bg-white p-4 mb-3 card-shadow rounded-sm border hover:border-rose-500 transition">
+                    <img src="https://via.placeholder.com/200x200?text=Drawing" class="w-full h-32 object-contain group-hover:scale-110 transition">
+                </div>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">Creative Art</p>
+                <h5 class="text-xs font-bold uppercase leading-tight mb-1">Custom Drawing (Bukan AI)</h5>
+                <p class="text-rose-600 text-xs font-black">IDR CUSTOM</p>
+                <p class="text-[10px] font-bold text-green-600 uppercase">Bisa Gantungan Kunci</p>
+            </div>
+
+            <!-- Item 6: UTBK -->
+            <div class="group cursor-pointer" onclick="orderService('Modul UTBK Matematika')">
+                <div class="bg-white p-4 mb-3 card-shadow rounded-sm border hover:border-rose-500 transition">
+                    <img src="https://via.placeholder.com/200x200?text=Math" class="w-full h-32 object-contain group-hover:scale-110 transition">
+                </div>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">Education</p>
+                <h5 class="text-xs font-bold uppercase leading-tight mb-1">Modul UTBK Mat + Bahas</h5>
+                <p class="text-rose-600 text-xs font-black">IDR EKONOMIS</p>
+                <p class="text-[10px] font-bold text-green-600 uppercase">Premium Quality</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BANNER SECTION (Dark Style) -->
+    <section class="bg-black py-20 my-10 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 text-center text-white relative z-10">
+            <h3 class="text-3xl md:text-5xl font-black italic mb-4">ADA REQUEST KHUSUS?</h3>
+            <p class="max-w-lg mx-auto text-sm text-gray-400 font-medium mb-10 tracking-widest uppercase italic">"Jasa apapun asal dibayar dan halal, Alfatih siap membantu kebutuhan kamu."</p>
+            <div class="flex justify-center gap-4">
+                <button onclick="orderService('Jasa Custom')" class="bg-white text-black px-8 py-3 font-extrabold rounded-sm italic hover:bg-rose-600 hover:text-white transition">START SELLING ></button>
+                <button onclick="window.location.href='#services'" class="border border-white text-white px-8 py-3 font-extrabold rounded-sm italic hover:bg-white hover:text-black transition">START SHOPPING ></button>
+            </div>
+        </div>
+        <!-- Background Icon deco -->
+        <i class="fa-solid fa-bolt absolute -right-10 -bottom-10 text-[20rem] text-white opacity-5 rotate-12"></i>
+    </section>
+
+    <!-- ACHIEVEMENTS (Latest News Style) -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="flex justify-between items-end mb-8">
+            <h3 class="text-2xl font-black uppercase italic leading-none border-l-8 border-rose-600 pl-4">Achievements & News</h3>
+            <a href="#" class="text-rose-600 font-bold text-xs underline uppercase">Show All ></a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="group">
+                <div class="h-48 bg-gray-200 mb-4 overflow-hidden rounded-sm">
+                    <img src="https://via.placeholder.com/400x300?text=SIT+Leader" class="w-full h-full object-cover group-hover:scale-105 transition">
+                </div>
+                <p class="text-[10px] font-black text-rose-600 uppercase italic">Leader</p>
+                <h6 class="font-black uppercase text-sm mt-1 leading-tight">Ketua SIT - SMAN 19 Garut</h6>
+                <p class="text-[10px] text-gray-400 mt-2 font-bold uppercase">By Alfatih, 2 days ago</p>
+            </div>
+            <div class="group">
+                <div class="h-48 bg-gray-200 mb-4 overflow-hidden rounded-sm">
+                    <img src="https://via.placeholder.com/400x300?text=OSN+Prov" class="w-full h-full object-cover group-hover:scale-105 transition">
+                </div>
+                <p class="text-[10px] font-black text-rose-600 uppercase italic">Competitions</p>
+                <h6 class="font-black uppercase text-sm mt-1 leading-tight">Peserta OSN Matematika Provinsi</h6>
+                <p class="text-[10px] text-gray-400 mt-2 font-bold uppercase">By Admin, 1 week ago</p>
+            </div>
+            <div class="group">
+                <div class="h-48 bg-gray-200 mb-4 overflow-hidden rounded-sm">
+                    <img src="https://via.placeholder.com/400x300?text=Creative+Winner" class="w-full h-full object-cover group-hover:scale-105 transition">
+                </div>
+                <p class="text-[10px] font-black text-rose-600 uppercase italic">Award</p>
+                <h6 class="font-black uppercase text-sm mt-1 leading-tight">Juara 3 Lomba Konten Kreator</h6>
+                <p class="text-[10px] text-gray-400 mt-2 font-bold uppercase">By Alfatih, 3 weeks ago</p>
+            </div>
+            <div class="group">
+                <div class="h-48 bg-gray-200 mb-4 overflow-hidden rounded-sm">
+                    <img src="https://via.placeholder.com/400x300?text=Google+Vibes" class="w-full h-full object-cover group-hover:scale-105 transition">
+                </div>
+                <p class="text-[10px] font-black text-rose-600 uppercase italic">Tech</p>
+                <h6 class="font-black uppercase text-sm mt-1 leading-tight">Peserta #JuaraVibesCoding Google</h6>
+                <p class="text-[10px] text-gray-400 mt-2 font-bold uppercase">By Admin, 1 month ago</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST SIGNALS (As Seen In style) -->
+    <section class="max-w-7xl mx-auto px-4 py-12 border-t opacity-40 grayscale flex flex-wrap justify-center gap-12 text-2xl font-black italic">
+        <span>SMAN 19 GARUT</span>
+        <span>GOOGLE CODING</span>
+        <span>OSN 2024</span>
+        <span>CONTENT CREATOR</span>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#111] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-16">
+                <div class="col-span-2">
+                    <h4 class="text-2xl font-black italic uppercase mb-4">Kayana <span class="text-rose-600">Market</span></h4>
+                    <p class="text-xs text-gray-500 font-medium max-w-xs uppercase leading-relaxed">Platform marketplace jasa terbaik untuk siswa SMAN 19 Garut oleh Alfatih Ghani Hamizan.</p>
+                </div>
+                <div class="text-[10px] font-bold uppercase leading-loose text-gray-400">
+                    <h5 class="text-white mb-4 italic text-xs">Services</h5>
+                    <p>Physics Speedrun</p>
+                    <p>Chess Pro</p>
+                    <p>Web Development</p>
+                    <p>App Making</p>
+                </div>
+                <div class="text-[10px] font-bold uppercase leading-loose text-gray-400">
+                    <h5 class="text-white mb-4 italic text-xs">Achievements</h5>
+                    <p>OSN Provinsi</p>
+                    <p>Juara Konten</p>
+                    <p>Google Vibes</p>
+                    <p>Ketua SIT</p>
+                </div>
+                <div class="text-[10px] font-bold uppercase leading-loose text-gray-400">
+                    <h5 class="text-white mb-4 italic text-xs">Help</h5>
+                    <p>Contact Us</p>
+                    <p>Refund Policy</p>
+                    <p>Terms</p>
+                    <p>FAQ</p>
+                </div>
+                <div class="text-[10px] font-bold uppercase leading-loose text-gray-400">
+                    <h5 class="text-white mb-4 italic text-xs">Social</h5>
+                    <p>Instagram</p>
+                    <p>LinkedIn</p>
+                    <p>WhatsApp</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex justify-between items-center text-[10px] font-bold uppercase tracking-widest text-gray-500">
+                <p>&copy; 2024 KAYANA MARKET. ALL RIGHTS RESERVED.</p>
+                <p>MADE BY ALFATIH GHANI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function orderService(serviceName) {
+            const phone = "62895619034484";
+            const message = encodeURIComponent(`Halo Alfatih, saya melihat katalog di Kayana Market. Saya ingin membeli jasa: ${serviceName}. Bagaimana proses selanjutnya?`);
+            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
